@@ -3,6 +3,7 @@
 Скачать Wordpress в каталог wordpress
 
 Выпустить сертификат, выполнив на Docker хосте
+
 openssl req -x509 -nodes -days 30 -newkey rsa:2048 \
     -keyout server.key \
     -out server.crt \
@@ -10,12 +11,15 @@ openssl req -x509 -nodes -days 30 -newkey rsa:2048 \
     -addext "subjectAltName = IP:127.0.0.1" 
 
 Сгенерировать данные для авторизации к Prometheus
+
 htpasswd -cb .htpasswd <имя_пользователя> <пароль>  
 
 Поднять контейнеры
+
 docker compose up -d
 
 Доступ к странице Wordpress по https://local.test/
+
 Prometheus слушает на http://local.test:9090
 
 
