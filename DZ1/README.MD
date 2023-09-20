@@ -24,6 +24,3 @@ docker compose up -d
 ```
 Доступ к странице Wordpress по https://local.test/
 Prometheus слушает на http://local.test:9090
-
-
-
