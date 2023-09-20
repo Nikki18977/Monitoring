@@ -7,7 +7,7 @@ docker compose -f docker-compose_v3_ubuntu_mysql_latest.yaml up -d
 Запустить генератор метрик
 
 ```bash
-docker exec -it zabbix-docker-metrics-generator-1 systemctl status metrics-generator.service
+docker exec -it zabbix-docker-metrics-generator-1 systemctl start metrics-generator.service
 ```
 
 ```txt

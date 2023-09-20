@@ -1,0 +1,11 @@
+[Unit]
+Description=Metrics generator 
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/tmp/metrics-generator/metrics-generator.sh
+ExecReload=/bin/kill -HUP \$MAINPID
+
+[Install]
+WantedBy=multi-user.target
