@@ -43,6 +43,6 @@ htpasswd -cb .htpasswd <имя_пользователя> <пароль>
 ```txt
 docker compose up -d
 ```
-Доступ к странице Wordpress по https://local.test/
-Prometheus слушает на http://local.test:9090
-Grafana слушает на http://local.test:3000
+#### Доступ к странице Wordpress по https://local.test/
+#### Prometheus слушает на http://local.test:9090
+#### Grafana слушает на http://local.test:3000
