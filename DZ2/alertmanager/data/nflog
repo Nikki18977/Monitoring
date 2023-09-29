@@ -1,0 +1,15 @@
+ˆ
+y
+<{}/{env="infra"}/{severity="critical"}:{severity="critical"}
+infra-admintelegram*¤§Ú¨¼Ñ—k:þªõ¸µÚ”¹¸Û¼ý÷Ûªšy¤ˆÜ¨¼Ñ—k
+
+5{}:{alertname="PrometheusTargetMissing", env="infra"}
+team-supporttelegram*è„Û¨Äµ©Æ:¾çå¢ºƒ™€Žƒë‡œ£¹ûŸ¢ªé½šþþ‡£¾èåÜ¨Äµ©Æ}
+m
+7{}:{alertname="PrometheusTooManyRestarts", env="infra"}
+team-supporttelegram*ß‡Û¨ÂÜü2
+¥ª¦ôù®òäîßèÜ¨ÂÜü•
+„
+<{}/{env="infra"}/{severity="critical"}:{severity="critical"}
+team-opstelegram*à”Û¨ì‚»Í2
+ªé½šþþ‡£¾:¾çå¢ºƒ™€Žƒë‡œ£¹ûŸ¢àõÜ¨ì‚»Í
