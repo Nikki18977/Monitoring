@@ -1,0 +1,36 @@
+apiVersion: 1
+
+deleteDatasources:
+  - name: Prometheus
+    orgId: 1
+  - name: Prometheus-VM
+    orgId: 1
+
+datasources:
+- name: Prometheus-VmS
+  type: prometheus
+  access: proxy
+  orgId: 1
+  url: http://vmauth:8427/select/0/prometheus
+  basicAuth: false
+  isDefault: false
+  jsonData:
+     graphiteVersion: "1.1"
+     tlsAuth: false
+     tlsAuthWithCACert: false
+  version: 1
+  editable: true
+
+- name: Prometheus
+  type: prometheus
+  access: proxy
+  orgId: 1
+  url: http://prometheus:9090
+  basicAuth: false
+  isDefault: true
+  jsonData:
+     graphiteVersion: "1.1"
+     tlsAuth: false
+     tlsAuthWithCACert: false
+  version: 1
+  editable: true

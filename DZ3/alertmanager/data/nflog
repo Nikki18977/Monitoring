@@ -1,0 +1,7 @@
+‘
+€
+<{}/{env="infra"}/{severity="critical"}:{severity="critical"}
+team-opstelegram*öÉž©µ¸žø:­¿úºû‰‚îO«¥éšÁàžŒßËË¦‘Ü¥íÔuöª ©µ¸žøž
+
+E{}/{env="infra"}/{severity=~"warning|critical"}:{severity="critical"}
+team-supporttelegram*öÉž©Ä¨îù:­¿úºû‰‚îO«¥éšÁàžŒßËË¦‘Ü¥íÔuöª ©Ä¨îù
