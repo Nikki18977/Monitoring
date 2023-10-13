@@ -1,0 +1,6 @@
+### Добавил filebeat, heartbeat, metricbeat
+
+
+
+
+ 

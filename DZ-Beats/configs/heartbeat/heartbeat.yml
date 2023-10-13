@@ -1,0 +1,62 @@
+setup.ilm.overwrite: true
+
+heartbeat.config.monitors:
+  path: ${path.config}/monitors.d/*.yml
+  reload.enabled: false
+  reload.period: 5s
+
+heartbeat.monitors:
+- type: http
+  enabled: true
+  id: otus-dz
+  name: "Monitoring for google.com, and http://otus.ru"
+  urls: ["http://google.com","http://otus.ru"]
+  max_redirects: 5
+  schedule: '@every 15s'
+
+
+- type: icmp
+  schedule: '*/5 * * * * * *'
+  hosts: ["filebeat","metricbeat","es-hot","kibana"]
+  ipv4: true
+  ipv6: true
+  mode: any
+  timeout: 3s
+  wait: 1s
+
+- type: http
+  enabled: true
+  schedule: '@every 5s'
+  urls: ["http://kibana:5601"]
+  ipv4: true
+  ipv6: true
+  mode: any
+  timeout: 3s
+  check.request:
+    method: "GET"
+  check.response:
+    status: 200
+
+setup.template.settings:
+  index.number_of_shards: 1
+  index.codec: best_compression
+
+setup.kibana:
+  host: ${KIBANA_HOSTS}
+  username: ${ELASTIC_USER}
+  password: ${ELASTIC_PASSWORD}
+
+setup.dashboards.enabled: true
+
+output.elasticsearch:
+  hosts: ['https://es-hot:9200']
+  username: ${ELASTIC_USER}
+  password: ${ELASTIC_PASSWORD}
+
+processors:
+- add_docker_metadata: ~
+
+logging.to_files: false
+
+monitoring.enabled: true
+

@@ -1,0 +1,34 @@
+setup.ilm.overwrite: true
+
+metricbeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+
+setup.template.settings:
+  index.number_of_shards: 1
+  index.codec: best_compression
+
+
+setup.kibana:
+  host: ${KIBANA_HOSTS}
+  username: ${ELASTIC_USER}
+  password: ${ELASTIC_PASSWORD}
+
+setup.dashboards.enabled: true
+
+output.elasticsearch:
+  hosts: ["${ELASTIC_HOSTS}"]
+  username: ${ELASTIC_USER}
+  password: ${ELASTIC_PASSWORD}
+  protocol: "https"
+  ssl.verification_mode: none
+
+processors:
+  - add_host_metadata: ~
+  - add_docker_metadata: ~
+  
+
+
+
+
