@@ -1,0 +1,23 @@
+sources:
+  syslog_in:
+    type: syslog
+    address: 0.0.0.0:9000
+    mode: udp
+
+
+
+sinks:
+  syslog_out:
+    type: elasticsearch
+    inputs: 
+      - syslog_in
+    endpoints:
+      - ${ELASTIC_HOSTS}
+    auth:
+      password: ${ELASTIC_PASSWORD}
+      user: ${ELASTIC_USER}
+      strategy: basic
+    bulk:
+      index: "vector-%Y-%m-%d"
+    tls:
+      verify_certificate: false
