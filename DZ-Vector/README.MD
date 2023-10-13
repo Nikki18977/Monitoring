@@ -7,5 +7,5 @@ systemctl restart rsyslog.service
 ```
 
 ### Данные в Kibana
-![Данные в Kibana](Screenshot_vectro.jpg)
+![Данные в Kibana](Screenshot_vector.jpg)
 
